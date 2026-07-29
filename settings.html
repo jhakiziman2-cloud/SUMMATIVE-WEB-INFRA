@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings</title>
+
+    <link rel="stylesheet" href="cssfiles/settings.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="settings-container">
+
+        <header>
+
+            <h1>Account Settings</h1>
+
+            <p>
+                Manage your account and preferences.
+            </p>
+
+        </header>
+
+
+        <!-- PROFILE SETTINGS -->
+
+        <section class="settings-card">
+
+            <h2>Profile Information</h2>
+
+            <form id="profileForm">
+
+                <label for="name">
+
+                    Full Name
+
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    required>
+
+                <label for="email">
+
+                    Email Address
+
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    required>
+
+                <button type="submit">
+
+                    Save Changes
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- PASSWORD SETTINGS -->
+
+        <section class="settings-card">
+
+            <h2>Change Password</h2>
+
+            <form id="passwordForm">
+
+                <label for="currentPassword">
+
+                    Current Password
+
+                </label>
+
+                <input
+                    type="password"
+                    id="currentPassword"
+                    required>
+
+                <label for="newPassword">
+
+                    New Password
+
+                </label>
+
+                <input
+                    type="password"
+                    id="newPassword"
+                    required>
+
+                <label for="confirmPassword">
+
+                    Confirm New Password
+
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    required>
+
+                <button type="submit">
+
+                    Change Password
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- APPEARANCE -->
+
+        <section class="settings-card">
+
+            <h2>Appearance</h2>
+
+            <p>
+
+                Select your preferred theme.
+
+            </p>
+
+            <div class="theme-buttons">
+
+                <button id="lightTheme">
+
+                    Light Mode
+
+                </button>
+
+                <button id="darkTheme">
+
+                    Dark Mode
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ACCOUNT -->
+
+        <section class="settings-card">
+
+            <h2>Account</h2>
+
+            <button
+                id="deleteAccountButton"
+                class="delete-button">
+
+                Delete Account
+
+            </button>
+
+        </section>
+
+
+
+        <!-- NAVIGATION -->
+
+        <section class="settings-card">
+
+            <button
+                id="backButton">
+
+                Back to Dashboard
+
+            </button>
+
+        </section>
+
+    </div>
+
+    <script src="jsfiles/settings.js"></script>
+
+</body>
+
+</html>

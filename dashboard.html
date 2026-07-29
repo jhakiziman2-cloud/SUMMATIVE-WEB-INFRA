@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bitta - Goal Tracker Dashboard</title>
+
+    <link rel="stylesheet" href="cssfiles/dashboard.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard">
+
+
+
+    <!-- SIDEBAR -->
+
+
+    <aside class="sidebar">
+
+
+        <div class="logo">
+
+            <h2>
+
+                <i>Bitta</i>
+
+            </h2>
+
+
+        </div>
+
+
+
+        <nav>
+
+
+            <ul>
+
+
+                <li class="active">
+
+                    Dashboard
+
+                </li>
+
+
+
+                <li id="goalsButton">
+
+                    Goals
+
+                </li>
+
+
+
+                <li id="calendarNav">
+
+                    Calendar
+
+                </li>
+
+
+
+                <li>
+
+                    Progress
+
+                </li>
+
+
+
+                <li>
+
+                    Statistics
+
+                </li>
+
+
+
+                <li>
+
+                    Settings
+
+                </li>
+
+
+            </ul>
+
+
+        </nav>
+
+
+
+    </aside>
+
+
+
+
+
+    <!-- MAIN CONTENT -->
+
+
+    <main class="main-content">
+
+
+
+
+
+        <!-- TOP BAR -->
+
+
+        <header class="topbar">
+
+
+            <div>
+
+
+                <h1>
+
+                    Welcome Back,
+
+                    <span id="welcomeName">
+
+                        User
+
+                    </span>
+
+
+                </h1>
+
+
+
+                <p>
+
+                    Keep showing up.
+
+                    Small progress every day creates big success.
+
+                </p>
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <!-- PROFILE -->
+
+
+            <div class="profile">
+
+
+                <button id="profileButton">
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        height="48px"
+                        viewBox="0 -960 960 960"
+                        width="48px"
+                        fill="black">
+
+
+                        <path d="M180-217q60-56 136-90.5T480-342q88 0 164 34.5T780-217v-563H180v563Zm400-244q40-40 40-98t-40-98q-40-40-98-40t-98 40q-40 40-40 98t40 98q40 40 98 40t98-40ZM180-120q-24 0-42-18t-18-42v-600q0-24 18-42t42-18h600q24 0 42 18t18 42v600q0 24-18 42t-42 18H180Zm43-60h513q-62-53-125.5-77.5T480-282q-67 0-130.5 24.5T223-180Zm204-324q-23-23-23-55t23-55q23-23 55-23t55 23q23 23 23 55t-23 55q-23 23-55 23t-55-23Zm53 5Z"/>
+
+
+                    </svg>
+
+
+                </button>
+
+
+
+
+
+                <div id="profileMenu" class="hidden">
+
+
+                    <h3 id="profileName">
+
+                        User Name
+
+                    </h3>
+
+
+
+                    <p id="profileEmail">
+
+                        user@email.com
+
+                    </p>
+
+
+
+
+                    <hr>
+
+
+
+                    <button id="settingsButton">
+
+                        Settings
+
+                    </button>
+
+
+
+
+                    <button id="logoutButton">
+
+                        Logout
+
+                    </button>
+
+
+
+
+                    <button id="deleteAccountButton">
+
+                        Delete Account
+
+                    </button>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+        </header>
+
+
+
+
+
+
+
+
+
+        <!-- STATISTICS -->
+
+
+        <section class="stats">
+
+
+
+            <div class="card">
+
+
+                <h2 id="goalCount">
+
+                    0
+
+                </h2>
+
+
+                <p>
+
+                    Active Goals
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+            <div class="card">
+
+
+                <h2 id="completedGoals">
+
+                    0
+
+                </h2>
+
+
+                <p>
+
+                    Goals Completed
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+            <div class="card">
+
+
+                <h2 id="currentStreak">
+
+                    0
+
+                </h2>
+
+
+                <p>
+
+                    Day Streak
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+            <div class="card">
+
+
+                <h2 id="completionRate">
+
+                    0%
+
+                </h2>
+
+
+                <p>
+
+                    Completion Rate
+
+                </p>
+
+
+            </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+        <!-- CONTENT GRID -->
+
+
+        <section class="content-grid">
+
+
+
+
+
+        <!-- LEFT COLUMN -->
+
+
+        <section class="left-column">
+
+
+
+
+
+
+
+            <!-- MOTIVATION -->
+
+
+            <div class="panel">
+
+
+                <h2>
+
+                    Today's Motivation
+
+                </h2>
+
+
+
+
+                <blockquote id="quote">
+
+                    Loading motivational quote...
+
+                </blockquote>
+
+
+
+
+                <button id="newQuote">
+
+                    Generate New Quote
+
+                </button>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <!-- CREATE GOAL -->
+
+
+            <div class="panel">
+
+
+                <h2>
+
+                    Create New Goal
+
+                </h2>
+
+                <div class="panel">
+
+                   <h2>
+
+                       My Goals
+
+                   </h2>
+
+                   <ul id="goalList">
+
+                      <li>
+
+                         No goals created yet.
+
+                      </li>
+
+                    </ul>
+
+                </div>
+
+
+
+
+                <form id="goalForm">
+
+
+
+                    <input
+                    type="text"
+                    id="goalTitle"
+                    placeholder="Goal name"
+                    required>
+
+
+
+
+                    <textarea
+                    id="goalDescription"
+                    placeholder="Describe your goal"
+                    required></textarea>
+
+
+
+
+                    <label>
+
+                        Start Date
+
+                    </label>
+
+
+
+                    <input
+                    type="date"
+                    id="startDate"
+                    required>
+
+
+
+
+
+                    <label>
+
+                        End Date
+
+                    </label>
+
+
+
+
+                    <input
+                    type="date"
+                    id="endDate"
+                    required>
+
+
+
+
+                    <input
+                    type="text"
+                    id="goalCategory"
+                    placeholder="Category (optional)">
+
+
+
+
+
+                    <input
+                    type="text"
+                    id="dailyTarget"
+                    placeholder="Daily target"
+                    required>
+
+
+
+
+                    <button type="submit">
+
+                        Save Goal
+
+                    </button>
+
+
+
+                </form>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <!-- CURRENT GOAL -->
+
+
+            <div class="panel">
+
+
+                <h2>
+
+                    Current Goal
+
+                </h2>
+
+
+
+                <h3 id="currentGoal">
+
+                    No Goal Selected
+
+                </h3>
+
+
+
+
+                <p id="goalDuration">
+
+                    Choose a goal to begin.
+
+                </p>
+
+
+
+
+                <div class="progress-bar">
+
+
+                    <div id="progressFill">
+
+                        0%
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <!-- DAILY PROGRESS -->
+
+
+            <div class="panel">
+
+
+                <h2>
+
+                    Today's Progress
+
+                </h2>
+
+
+
+
+                <form id="progressForm">
+
+
+                    <textarea
+                    id="progressActivity"
+                    placeholder="What did you work on today?"
+                    required></textarea>
+
+
+
+
+                    <input
+                    type="number"
+                    id="progressTime"
+                    placeholder="Time spent in minutes"
+                    required>
+
+
+
+
+                    <input
+                    type="number"
+                    id="progressAmount"
+                    placeholder="Progress made (%)"
+                    min="1"
+                    max="100"
+                    required>
+
+
+
+
+                    <button type="submit">
+
+                        Save Progress
+
+                    </button>
+
+
+
+                </form>
+
+
+
+            </div>
+
+
+
+
+
+
+            <!-- PROGRESS HISTORY -->
+
+
+            <div class="panel">
+
+
+                <h2>
+
+                    Progress History
+
+                </h2>
+
+
+
+
+                <ul id="progressList">
+
+
+
+
+                </ul>
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <!-- DEADLINES -->
+
+
+            <div class="panel">
+
+
+                <h2>
+
+                    Upcoming Deadlines
+
+                </h2>
+
+
+
+
+                <ul id="deadlineList">
+
+
+                    <li>
+
+                        No upcoming deadlines.
+
+                    </li>
+
+
+                </ul>
+
+
+
+            </div>
+            
+
+
+
+        <!-- RIGHT COLUMN -->
+
+
+        <section class="right-column">
+
+
+
+
+
+
+            <!-- TODAY'S TASKS -->
+
+
+            <div class="panel">
+
+
+                <h2>
+
+                    Today's Tasks
+
+                </h2>
+
+
+
+
+                <ul id="taskList">
+
+
+                    <li>
+
+                        No tasks yet.
+
+                    </li>
+
+
+                </ul>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <!-- REMINDER -->
+
+
+            <div class="panel">
+
+
+                <h2>
+
+                    Reminder
+
+                </h2>
+
+
+
+
+                <p id="reminderText">
+
+
+                    You're all caught up!
+
+
+                </p>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- CALENDAR -->
+
+
+            <div class="panel">
+
+               <h2>
+
+                  Goal Calendar
+
+               </h2>
+
+               <div id="calendar"></div>
+
+            </div>
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+        </section>
+        
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+</div>
+
+
+
+<script src="jsfiles/dashboard.js"></script>
+
+</body>
+
+
+</html>

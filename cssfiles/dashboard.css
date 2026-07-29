@@ -1,0 +1,1279 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+
+body{
+
+    font-family:Poppins, sans-serif;
+
+    background-color:whitesmoke;
+
+    color:darkslategray;
+
+}
+
+
+/* ---------- MAIN LAYOUT ---------- */
+
+.dashboard{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+
+/* ---------- SIDEBAR ---------- */
+
+.sidebar{
+
+    width:250px;
+
+    background-color:white;
+
+    border-right:1px solid gainsboro;
+
+    padding:25px;
+
+}
+
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+
+.logo h2{
+
+    color:cadetblue;
+
+}
+
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+
+.sidebar li{
+
+    padding:15px;
+
+    margin-bottom:10px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+.sidebar li:hover{
+
+    background-color:aliceblue;
+
+}
+
+
+.active{
+
+    background-color:aliceblue;
+
+    color:cadetblue;
+
+    font-weight:bold;
+
+}
+
+
+/* ---------- MAIN CONTENT ---------- */
+
+.main-content{
+
+    flex:1;
+
+    padding:30px;
+
+}
+
+
+/* ---------- TOP BAR ---------- */
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+
+.topbar h1{
+
+    font-size:32px;
+
+    margin-bottom:5px;
+
+}
+
+
+.topbar p{
+
+    color:dimgray;
+
+}
+
+
+/* ---------- PROFILE ---------- */
+
+.profile{
+
+    position:relative;
+
+}
+
+
+#profileButton{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+}
+
+
+#profileButton:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+/* ---------- PROFILE MENU ---------- */
+
+#profileMenu{
+
+    position:absolute;
+
+    top:60px;
+
+    right:0;
+
+    width:220px;
+
+    background:white;
+
+    border:1px solid gainsboro;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+
+}
+
+
+.hidden{
+
+    display:none;
+
+}
+
+
+#profileMenu h3{
+
+    margin-bottom:5px;
+
+}
+
+
+#profileMenu p{
+
+    color:dimgray;
+
+    margin-bottom:15px;
+
+}
+
+
+#profileMenu hr{
+
+    margin:15px 0;
+
+}
+
+
+/* ---------- MENU BUTTONS ---------- */
+
+#profileMenu button{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:10px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background-color:cadetblue;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+
+#profileMenu button:hover{
+
+    background-color:steelblue;
+
+}
+
+
+#deleteAccountButton{
+
+    background-color:indianred;
+
+}
+
+
+#deleteAccountButton:hover{
+
+    background-color:firebrick;
+
+}
+
+
+/* ---------- STATISTICS ---------- */
+
+.stats{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.card{
+
+    flex:1;
+
+    min-width:180px;
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    text-align:center;
+
+    border:1px solid gainsboro;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+.card h2{
+
+    font-size:30px;
+
+    color:cadetblue;
+
+    margin-bottom:10px;
+
+}
+
+
+.card p{
+
+    color:dimgray;
+
+}
+
+
+/* ---------- CONTENT GRID ---------- */
+
+.content-grid{
+
+    display:flex;
+
+    gap:25px;
+
+    align-items:flex-start;
+
+}
+
+
+.left-column{
+
+    flex:2;
+
+}
+
+
+.right-column{
+
+    flex:1;
+
+}
+
+
+
+.panel{
+
+    background-color:white;
+
+    border:1px solid gainsboro;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+
+}
+
+
+.panel h2{
+
+    margin-bottom:15px;
+
+    color:cadetblue;
+
+}
+
+
+.panel h3{
+
+    margin-bottom:10px;
+
+}
+
+
+.panel p{
+
+    color:dimgray;
+
+    line-height:1.6;
+
+}
+
+
+/* ---------- QUOTE ---------- */
+
+blockquote{
+
+    font-style:italic;
+
+    background-color:floralwhite;
+
+    border-left:5px solid cadetblue;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:15px 0;
+
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+button{
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background-color:cadetblue;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+button:hover{
+
+    background-color:steelblue;
+
+}
+
+
+/* ---------- PROGRESS BAR ---------- */
+
+.progress-bar{
+
+    width:100%;
+
+    height:22px;
+
+    background-color:lightgray;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin-top:20px;
+
+}
+
+
+#progressFill{
+
+    width:0%;
+
+    height:100%;
+
+    background-color:mediumseagreen;
+
+    color:white;
+
+    text-align:center;
+
+    line-height:22px;
+
+    font-size:14px;
+
+    transition:0.5s;
+
+}
+
+
+/* ---------- TASKS ---------- */
+
+#taskList{
+
+    list-style:none;
+
+}
+
+
+#taskList li{
+
+    padding:12px;
+
+    margin-bottom:10px;
+
+    background-color:whitesmoke;
+
+    border-radius:8px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+#taskList input{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+
+/* ---------- DEADLINES ---------- */
+
+#deadlineList{
+
+    list-style:none;
+
+}
+
+
+#deadlineList li{
+
+    padding:12px;
+
+    margin-bottom:10px;
+
+    border-left:4px solid peru;
+
+    background-color:floralwhite;
+
+    border-radius:6px;
+
+}
+
+
+/* ---------- REMINDER ---------- */
+
+#reminderText{
+
+    background-color:honeydew;
+
+    border-left:5px solid seagreen;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    color:darkslategray;
+
+}
+
+
+/* ---------- CALENDAR ---------- */
+
+#calendarButton{
+
+    margin-top:15px;
+
+    width:100%;
+
+}
+
+
+
+
+#welcomeName{
+
+    color:cadetblue;
+
+}
+
+
+/* ---------- LINKS ---------- */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+    background-color:whitesmoke;
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    background-color:silver;
+
+    border-radius:10px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background-color:gray;
+
+}
+
+/* ===============================
+   GOAL CREATION FORM
+   =============================== */
+
+
+#goalForm {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+
+#goalForm input,
+#goalForm textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid lightgray;
+
+    border-radius: 8px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+}
+
+
+
+#goalForm textarea {
+
+    height: 90px;
+
+    resize: none;
+
+}
+
+
+
+#goalForm input:focus,
+#goalForm textarea:focus {
+
+    border-color: steelblue;
+
+}
+
+
+
+
+
+#goalForm label {
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: dimgray;
+
+}
+
+
+
+
+
+#goalForm button {
+
+
+    padding: 12px;
+
+
+    border: none;
+
+
+    border-radius: 8px;
+
+
+    background-color: seagreen;
+
+
+    color: white;
+
+
+    font-size: 15px;
+
+
+    cursor: pointer;
+
+
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+
+
+
+
+#goalForm button:hover {
+
+
+    background-color: forestgreen;
+
+
+}
+
+
+
+
+
+
+
+/* ===============================
+   CURRENT GOAL PROGRESS
+   =============================== */
+
+
+.progress-bar {
+
+
+    width: 100%;
+
+
+    height: 25px;
+
+
+    background-color: gainsboro;
+
+
+    border-radius: 20px;
+
+
+    overflow: hidden;
+
+
+    margin-top: 15px;
+
+
+}
+
+
+
+
+#progressFill {
+
+
+    height: 100%;
+
+
+    width: 0%;
+
+
+    background-color: seagreen;
+
+
+    color: white;
+
+
+    display: flex;
+
+
+    align-items: center;
+
+
+    justify-content: center;
+
+
+    font-size: 13px;
+
+
+    font-weight: 500;
+
+
+    transition: width 0.5s ease;
+
+
+}
+
+
+
+
+
+
+
+/* ===============================
+   GOAL FORM PANEL SPACING
+   =============================== */
+
+
+.panel form {
+
+
+    margin-top: 10px;
+
+
+}
+
+
+
+
+
+/* ===============================
+   MOBILE RESPONSIVENESS
+   =============================== */
+
+
+@media screen and (max-width: 768px) {
+
+
+    #goalForm input,
+    #goalForm textarea {
+
+
+        font-size: 13px;
+
+
+    }
+
+
+
+    #goalForm button {
+
+
+        font-size: 14px;
+
+
+    }
+
+
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width:900px){
+
+    .dashboard{
+
+        flex-direction:column;
+
+    }
+
+    .sidebar{
+
+        width:100%;
+
+    }
+
+    .sidebar ul{
+
+        display:flex;
+
+        justify-content:space-around;
+
+        flex-wrap:wrap;
+
+    }
+
+    .main-content{
+
+        padding:20px;
+
+    }
+
+    .topbar{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .stats{
+
+        flex-direction:column;
+
+    }
+
+    .content-grid{
+
+        flex-direction:column;
+
+    }
+
+}
+
+
+/* ---------- SMALL PHONES ---------- */
+
+@media (max-width:600px){
+
+    .topbar h1{
+
+        font-size:24px;
+
+    }
+
+    .card h2{
+
+        font-size:24px;
+
+    }
+
+    .panel{
+
+        padding:15px;
+
+    }
+
+    button{
+
+        width:100%;
+
+    }
+
+}
+
+/* ===============================
+   DAILY PROGRESS FORM
+   =============================== */
+
+
+#progressForm {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+
+#progressForm textarea,
+#progressForm input {
+
+
+    padding:12px;
+
+    border:1px solid lightgray;
+
+    border-radius:8px;
+
+    font-family:'Poppins', sans-serif;
+
+
+}
+
+
+
+#progressForm textarea {
+
+
+    height:100px;
+
+    resize:none;
+
+
+}
+
+
+
+#progressForm button {
+
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background-color: steelblue;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-family:'Poppins', sans-serif;
+
+
+}
+
+
+
+#progressForm button:hover {
+
+
+    background-color: darkslateblue;
+
+
+}
+
+
+
+
+
+/* ===============================
+   PROGRESS HISTORY
+   =============================== */
+
+
+#progressList {
+
+
+    list-style:none;
+
+    padding:0;
+
+
+}
+
+
+
+#progressList li {
+
+
+    background-color: whitesmoke;
+
+    padding:12px;
+
+    margin-bottom:10px;
+
+    border-radius:8px;
+
+
+}
+
+/* ===============================
+   PROGRESS HISTORY
+   =============================== */
+
+
+#progressList {
+
+    list-style: none;
+
+    padding: 0;
+
+}
+
+
+
+#progressList li {
+
+
+    background-color: whitesmoke;
+
+    padding: 15px;
+
+    margin-bottom: 12px;
+
+    border-radius: 10px;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+
+}
+
+
+
+.progress-date {
+
+
+    font-weight: 600;
+
+}
+
+
+
+.progress-activity {
+
+
+    color: dimgray;
+
+}
+
+
+
+.progress-time {
+
+
+    font-size: 13px;
+
+}
+
+/* ===============================
+   GOAL LIST
+   =============================== */
+
+#goalList {
+
+    list-style: none;
+
+    padding: 0;
+
+}
+
+#goalList li {
+
+    background-color: whitesmoke;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+}
+
+.goal-buttons {
+
+    margin-top: 12px;
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+.goal-buttons button {
+
+    padding: 8px 14px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-family: "Poppins", sans-serif;
+
+}
+
+.edit-goal {
+
+    background-color: steelblue;
+
+    color: white;
+
+}
+
+.current-goal {
+
+    background-color: seagreen;
+
+    color: white;
+
+}
+
+.delete-goal {
+
+    background-color: indianred;
+
+    color: white;
+
+}
+
+/* ===============================
+   CALENDAR
+   =============================== */
+
+#calendar {
+
+    margin-top: 15px;
+
+}
+
+.calendar-header {
+
+    text-align: center;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+
+}
+
+.calendar-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 6px;
+
+}
+
+.calendar-day {
+
+    background-color: whitesmoke;
+
+    border-radius: 8px;
+
+    padding: 10px;
+
+    text-align: center;
+
+    min-height: 45px;
+
+    font-size: 14px;
+
+}
+
+.completed-day {
+
+    background-color: lightgreen;
+
+}
+
+.deadline-day {
+
+    background-color: lightcoral;
+
+    color: white;
+
+    font-weight: bold;
+
+}
+
+.today {
+
+    border: 2px solid steelblue;
+
+}
+
+.deadline-icon {
+
+    width: 16px;
+
+    height: 16px;
+
+    vertical-align: middle;
+
+}
