@@ -20,7 +20,7 @@ In Visual Studio Code:
 
 1. Open the project folder.
 2. Install the "Live Server" extension if it is not already installed.
-3. Right-click on `index.html`.
+3. Right-click on index.html.
 4. Select Open with Live Server.
 
 The application will open in the browser.
